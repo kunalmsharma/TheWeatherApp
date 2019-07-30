@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+  <link rel="stylesheet" href="static/css/main.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <title>The Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>The Weather App</h1>
+
+    <p>
+      The weather here at <b>ZipCode<span> <%= weather.zip %> is <span> <%= weather.now_temp %></span>&deg; C </b> with 
+      <span id="summary"><%= weather.description %></span> 
+      
+    </p>
+    <p>All the temperatures are in &deg; C</p>
+
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead  class="thead-light">
+      <tr>
+        <th>Time</th>
+        <th>now</th>
+        <th><%= weather.one %></th>
+        <th><%= weather.two %></th>
+        <th><%= weather.three %></th>
+        <th><%= weather.four %></th>
+        <th><%= weather.five %></th>
+        <th><%= weather.six %></th>
+        <th><%= weather.seven %></th>
+        <th><%= weather.eight %></th>
+        <th><%= weather.nine %></th>
+        <th><%= weather.ten %></th>
+        <th><%= weather.eleven %></th>
+        <th><%= weather.twelve %></th>
+        <th><%= weather.thirteen %></th>
+        <th><%= weather.fourteen %></th>
+      </tr>
+    </thead>
+  <tr>
+    <td>Temperature</td>
+    <td><%= weather.now_temp %></td>
+    <td><%= weather.one_temp %></td>
+    <td><%= weather.two_temp %></td>
+    <td><%= weather.three_temp %></td>
+    <td><%= weather.four_temp %></td>
+    <td><%= weather.five_temp %></td>
+    <td><%= weather.six_temp %></td>
+    <td><%= weather.seven_temp %></td>
+    <td><%= weather.eight_temp %></td>
+    <td><%= weather.nine_temp %></td>
+    <td><%= weather.ten_temp %></td>
+    <td><%= weather.eleven_temp %></td>
+    <td><%= weather.twelve_temp %></td>
+    <td><%= weather.thirteen_temp %></td>
+    <td><%= weather.fourteen_temp %></td>
+  </tr>
+</table>
+</div>
+<br/>
+    
+ <table class="table table-hover">
+  <thead  class="thead-light">
+      <tr>
+        <th>Date</th>
+        <th></th>
+        <th>Max</th>
+        <th>Min</th>
+      </tr>
+    </thead>
+  <tr>
+    <td><%= weather.day2 %></td>
+
+    <% if (weather.icon_2 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_2 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_2 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_2 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high2 %></td>
+    <td><%= weather.temp_low2 %></td>
+  </tr>
+  <tr>
+    <td><%= weather.day3 %></td>
+    
+    <% if (weather.icon_3 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_3 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_3 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_3 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high3 %></td>
+    <td><%= weather.temp_low3 %></td>
+  </tr>
+  <tr>
+    <td><%= weather.day4 %></td>
+
+    <% if (weather.icon_4 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_4 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_4 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_4 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high4 %></td>
+    <td><%= weather.temp_low4 %></td>
+  </tr>
+  <tr>
+    <td><%= weather.day5 %></td>
+
+    <% if (weather.icon_5 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_5 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_5 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_5 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high5 %></td>
+    <td><%= weather.temp_low5 %></td>
+  </tr>
+  <tr>
+    <td><%= weather.day6 %></td>
+
+    <% if (weather.icon_6 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_6 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_6 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_6 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high6 %></td>
+    <td><%= weather.temp_low6 %></td>
+  </tr>
+  <tr>
+    <td><%= weather.day7 %></td>
+
+    <% if (weather.icon_7 == "clear-day") { %>
+    <td><img src="/static/image/sunny.jpg" alt="clear-day" ></img></td>
+    <% } else if (weather.icon_7 == "partly-cloudy-day") {%>
+    <td><img src="/static/image/partly-cloudy.jpg" alt="partly-cloudy" ></img></td>
+    <% } else if (weather.icon_7 == "cloudy") {%>
+    <td><img src="/static/image/cloud.jpg" alt="cloudy" ></img></td>
+    <% } else if (weather.icon_7 == "rain") {%>
+    <td><img src="/static/image/rain.jpg" alt="rain" ></img></td>
+    <% } %>
+
+    <td><%= weather.temp_high7 %></td>
+    <td><%= weather.temp_low7 %></td>
+  </tr>
+</table>
+<div class="row">
+<div class="col-sm-6">
+<table class="table table-hover">
+    <tbody >
+        <tr>
+          <th>Sunrise</th>
+            <td><%= weather.sunrise %></td>
+        </tr>
+        <tr>
+          <th>Chance of Rain</th>
+            <td><%= weather.rain %></td>
+        </tr>
+        <tr>
+          <th>Wind</th>
+            <td><%= weather.wind %> mph</td>
+        </tr>
+      <tr>
+          <th>Precipitation</th>
+            <td><%= weather.precipitation %></td>
+        </tr>
+        <tr>
+          <th>Visibility</th>
+            <td><%= weather.visibility %></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="col-sm-6">
+<table class="table table-hover">
+    <tbody >
+        <tr>
+          <th>Sunset</th>
+            <td><%= weather.sunset %></td>
+        </tr>
+        <tr>
+          <th>Humidity</th>
+            <td><%= ((weather.humidity)*100).toFixed(2) %>%</td>
+        </tr>
+        <tr>
+          <th>Pressure</th>
+            <td><%= ((weather.pressure)*0.02953).toFixed(2) %> inHg</td>
+        </tr>
+      <tr>
+          <th>UV Index</th>
+            <td><%= weather.uv %></td>
+        </tr>
+         <tr>
+          <th>Cloud Cover</th>
+            <td><%= weather.cloud %></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+  </body>
+</html>

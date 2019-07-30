@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+  <link rel="stylesheet" href="static/css/main.css">  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>The Weather App</title>
+  </head>
+  <body >
+    <div class="container">
+
+    <h1>The Weather App</h1>
+    <div>
+      <form class="form-inline" action="/" method="POST">
+        <label class="mb-2 mr-sm-2">Enter your Zip Code:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Enter your Zip Code" name="ZipCode" pattern="[0-9]{5}" required>
+        <button type="submit" class="btn btn-primary mb-2">Submit</button>
+      </form>    
+  </div>
+    <p>
+      The weather here Today at <b><span id="latitude"></span>&deg;,
+      <span id="longitude"></span>&deg;</b> is <span id="summary"></span> with
+      a temperature of <b><span id="temp"></span>&deg; C</b>. 
+    </p>
+    <p>All the temperatures are in &deg; C</p>
+  
+<div class="table-responsive">
+<table class="table table-hover">
+  <thead  class="thead-light">
+      <tr>
+        <th>Time</th>
+        <th>now</th>
+        <th id="one"></th>
+        <th id="two"></th>
+        <th id="three"></th>
+        <th id="four"></th>
+        <th id="five"></th>
+        <th id="six"></th>
+        <th id="seven"></th>
+        <th id="eight"></th>
+        <th id="nine"></th>
+        <th id="ten"></th>
+        <th id="eleven"></th>
+        <th id="twelve"></th>
+        <th id="thirteen"></th>
+        <th id="fourteen"></th>
+      </tr>
+    </thead>
+  <tr>
+    <td>Temperature</td>
+    <td id="now"></td>
+    <td id="one_temp"></td>
+    <td id="two_temp"></td>
+    <td id="three_temp"></td>
+    <td id="four_temp"></td>
+    <td id="five_temp"></td>
+    <td id="six_temp"></td>
+    <td id="seven_temp"></td>
+    <td id="eight_temp"></td>
+    <td id="nine_temp"></td>
+    <td id="ten_temp"></td>
+    <td id="eleven_temp"></td>
+    <td id="twelve_temp"></td>
+    <td id="thirteen_temp"></td>
+    <td id="fourteen_temp"></td>
+  </tr>
+</table>
+</div>
+<br/>
+    
+ <table class="table table-hover">
+  <thead  class="thead-light">
+      <tr>
+        <th>Date</th>
+        <th></th>
+        <th>Max</th>
+        <th>Min</th>
+      </tr>
+    </thead>
+  <tr>
+    <td id="day2"></td>
+    <td><img src="" alt="" id="icon_2"></img></td>
+    <td id="day2_high_temp"></td>
+    <td id="day2_low_temp"></td>
+  </tr>
+  <tr>
+    <td id="day3"></td>
+    <td><img src="" alt="" id="icon_3"></img></td>
+    <td id="day3_high_temp"></td>
+    <td id="day3_low_temp"></td>
+  </tr>
+  <tr>
+    <td id="day4"></td>
+    <td><img src="" alt="" id="icon_4"></img></td>
+    <td id="day4_high_temp"></td>
+    <td id="day4_low_temp"></td>
+  </tr>
+  <tr>
+    <td id="day5"></td>
+    <td><img src="" alt="" id="icon_5"></img></td>
+    <td id="day5_high_temp"></td>
+    <td id="day5_low_temp"></td>
+  </tr>
+  <tr>
+    <td id="day6"></td>
+    <td><img src="" alt="" id="icon_6"></img></td>
+    <td id="day6_high_temp"></td>
+    <td id="day6_low_temp"></td>
+  </tr>
+  <tr>
+    <td id="day7"></td>
+    <td><img src="" alt="" id="icon_7"></img></td>
+    <td id="day7_high_temp"></td>
+    <td id="day7_low_temp"></td>
+  </tr>
+</table>
+<div class="row">
+<div class="col-sm-6">
+<table class="table table-hover">
+    <tbody>
+        <tr>
+          <th>Sunrise</th>
+            <td id="sunrise"></td>
+        </tr>
+        <tr>
+          <th>Chance of Rain</th>
+            <td id="rain"></td>
+        </tr>
+        <tr>
+          <th>Wind</th>
+            <td id="wind"></td>
+        </tr>
+      <tr>
+          <th>Precipitation</th>
+            <td id="precipitation"></td>
+        </tr>
+        <tr>
+          <th>Visibility</th>
+            <td id="visibility"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+<div class="col-sm-6">
+<table class="table table-hover">
+    <tbody >
+        <tr>
+          <th>Sunset</th>
+            <td id="sunset"></td>
+        </tr>
+        <tr>
+          <th>Humidity</th>
+            <td id="humidity"></td>
+        </tr>
+        <tr>
+          <th>Pressure</th>
+            <td id="pressure"></td>
+        </tr>
+      <tr>
+          <th>UV Index</th>
+            <td id="uv"></td>
+        </tr>
+         <tr>
+          <th>Cloud Cover</th>
+            <td id="cloud"></td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+</div>
+<script src="/static/geolocation.js"></script>
+</body>
+</html>

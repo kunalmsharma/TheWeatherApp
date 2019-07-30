@@ -1,0 +1,12 @@
+body {
+  background-image: url("/static/image/background.jpg"); }
+
+.container {
+  margin: auto; }
+  @media screen and (max-width: 600px) {
+    .container {
+      width: 300px;
+      float: none; } }
+  @media screen and (min-width: 1000px) {
+    .container {
+      width: 75%; } }

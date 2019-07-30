@@ -1,0 +1,36 @@
+{
+  "name": "The Weather App",
+  "version": "1.0.0",
+  "description": "The Weather App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kunal Sharma",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/toastmarketing/tech-test.git"
+  },
+  "homepage": "",
+  "dependencies": {
+    "consolidate": "^0.15.1",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "express-ip": "^1.0.3",
+    "mustache": "^3.0.1",
+    "ngrok": "^3.2.3",
+    "node-fetch": "^2.6.0",
+    "node-where": "^1.1.0",
+    "nodemon": "^1.19.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4",
+    "zipcodes": "^8.0.0"
+  },
+  "devDependencies": {
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}

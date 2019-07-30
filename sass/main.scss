@@ -1,0 +1,23 @@
+
+$myWidth: 75%;
+$myMargin: auto;
+$background: '/static/image/background.jpg';
+
+body {
+  background-image:url($background);
+}
+
+$break-small: 600px;
+$break-large: 1000px;
+
+.container {
+  margin: $myMargin;	
+  
+  @media screen and (max-width: $break-small) {
+    width: 300px;
+    float: none;
+  }
+  @media screen and (min-width: $break-large) {
+    width: $myWidth;
+  }
+}
